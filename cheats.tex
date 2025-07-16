@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+
+\setmainfont{Fira Sans}
+
+% Define a subtle accent color
+\definecolor{accent}{HTML}{1F77B4}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\textcolor{gray}{Git \& GitHub Cheat Sheet — \thepage}}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{\textcolor{accent}{Git \& GitHub Cheat Sheet}}} \\[0.5em]
+    {\large Research Palooza 2025 - Git Pro Workshop} \\
+    {\small \textit{by Sayan Ghosh, IC\&SR, IIT Madras}}
+\end{center}
+
+\vspace{1em}
+
+% \begin{multicols}{1}
+% ----------------------------------
+
+\section*{\textcolor{accent}{Start a Repo}}
+\begin{itemize}
+  \item Initialize: \texttt{git init}
+  \item Clone existing: \texttt{git clone URL}
+\end{itemize}
+
+% ----------------------------------
+
+\section*{\textcolor{accent}{Basic Workflow}}
+\begin{itemize}
+  \item Check status: \texttt{git status}
+  \item Stage file: \texttt{git add <file>}
+  \item Commit changes: \texttt{git commit -m "Message"}
+  \item See history: \texttt{git log}
+\end{itemize}
+
+% ----------------------------------
+
+\section*{\textcolor{accent}{Branching}}
+\begin{itemize}
+  \item List branches: \texttt{git branch}
+  \item Create new branch: \texttt{git branch new-branch}
+  \item Switch branch: \texttt{git checkout new-branch}
+  \item Or: \texttt{git checkout -b new-branch}
+\end{itemize}
+
+% ----------------------------------
+
+\section*{\textcolor{accent}{Merging}}
+\begin{itemize}
+  \item Merge branch: \texttt{git merge other-branch}
+  \item Solve conflicts: edit files, then \texttt{git add} and \texttt{git commit}
+\end{itemize}
+
+% ----------------------------------
+
+\section*{\textcolor{accent}{Remote}}
+\begin{itemize}
+  \item Add remote: \texttt{git remote add origin URL}
+  \item Push: \texttt{git push -u origin branch}
+  \item Pull: \texttt{git pull}
+\end{itemize}
+
+% ----------------------------------
+
+\section*{\textcolor{accent}{Pull Requests}}
+\begin{itemize}
+  \item Push your branch to GitHub.
+  \item Open a Pull Request (PR) on GitHub.
+  \item Assign a teammate to review.
+  \item Merge PR when approved.
+\end{itemize}
+
+% ----------------------------------
+
+\section*{\textcolor{accent}{Tips}}
+\begin{itemize}
+  \item Use clear branch names: \texttt{issue-number/short-name}
+  \item Write meaningful commit messages.
+  \item Pull often to stay up to date.
+  \item Communicate in PR comments!
+\end{itemize}
+
+% \end{multicols}
+
+\vfill
+
+\begin{center}
+  {\small \copyright 2025 Sayan Ghosh}
+\end{center}
+
+\end{document}

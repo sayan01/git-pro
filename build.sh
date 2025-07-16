@@ -3,7 +3,7 @@
 # Compile a Beamer LaTeX file 3 times using XeLaTeX
 
 # Name of your TeX file (without .tex)
-FILE="slides"
+FILE="${1:-slides}" # Default to 'slides' if no argument is provided
 
 echo "🔧 Starting XeLaTeX build for $FILE.tex..."
 
@@ -19,3 +19,4 @@ for i in {1..3}; do
 done
 
 echo "✅ PDF build complete: $FILE.pdf"
+rm -rf $FILE.{aux,nav,out,toc,log,bbl,blg,snm} 2>/dev/null
